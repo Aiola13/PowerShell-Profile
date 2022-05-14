@@ -7,31 +7,35 @@ Powershell Profile is just here to prettifies your prompt and create a "unix-lik
 - PSColor powershell module (Install-Module PSColor)
 
 ## Installing
-Clone this repo
+- Clone this repo
+
+```shell
 git clone https://github.com/aiola13/PowerShell-Profile.git
+```
+
 
 ### PowerShell Profile Location
-Open PowerShell
-Type $profile
+- Open PowerShell
+- Type $profile
 
 The $profile variable returns the profile for the current user in the current program (host). 
 
 Usually
-```
-> $Home\[My ]Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```shell
+$Home\[My ]Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
 
 ### Edit the PowerShell Profile
 The profile is now created, allowing you to open and edit the PowerShell Profile. Again we are using the PowerShell command to open the profile file:
 
-```
-> ise $profile
+```shell
+ise $profile
 ```
 
 ### Execution Policy
 To use the profile you will need to make sure you have set the Execution Policy to Remote Signed. Otherwise, you won’t be able to run the script when PowerShell opens. Make sure you run PowerShell with elevated permissions (admin mode) to change the execution policy:
 
-```
+```shell
 Get-ExecutionPolicy
 # Set the ExecutionPolicy to RemoteSigned:
 Set-ExecutionPolicy RemoteSigned
